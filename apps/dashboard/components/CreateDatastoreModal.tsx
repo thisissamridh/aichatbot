@@ -170,6 +170,8 @@ export default function CreateDatastoreModal(props: Props) {
             props.handleClose();
 
             handleReset();
+            alert('Form submitted successfully!');  // Display an alert
+
 
             props?.onSubmitSuccess?.(state.datastore!, values);
           }}

@@ -89,7 +89,7 @@ const DatasourceOptions = (props: Props) => {
             }}
             onClick={
               each.disabled ||
-              (each.isPremium && !session?.organization?.isPremium)
+                (each.isPremium && !session?.organization?.isPremium)
                 ? () => setShowUsageLimitModal(true)
                 : () => props.onSelect(each.type)
             }
