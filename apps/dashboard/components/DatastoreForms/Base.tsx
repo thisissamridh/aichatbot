@@ -111,7 +111,7 @@ export default function BaseForm(props: Props) {
 
         <Input
           label="Datastore Name"
-          helperText="e.g.: Nuclear Fusion latest research papers"
+          // helperText="e.g.: Nuclear Fusion latest research papers"
           control={control as any}
           {...register('name')}
         />
@@ -134,8 +134,8 @@ export default function BaseForm(props: Props) {
             <div className="flex flex-col">
               <FormLabel>Public</FormLabel>
               <Typography level="body-xs">
-                When activated, your datastore will be available by anyone on
-                the internet.{' '}
+                {/* When activated, your datastore will be available by anyone on
+                the internet.{' '} */}
                 {/* <Typography fontWeight={'bold'} color="primary">
                   Required for a public ChatGPT plugin.
                 </Typography> */}

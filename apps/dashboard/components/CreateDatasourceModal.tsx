@@ -73,7 +73,8 @@ export default function CreateDatastoreModal(props: Props) {
   const steps = [
     {
       label: 'Choose a Datasource',
-      description: `An empty Datastore is not very useful! Now add some data in it`,
+      // description: `An empty Datastore is not very useful! Now add some data in it`
+
       disableButtons: true,
       component: (
         <DatasourceOptions
@@ -177,7 +178,7 @@ export default function CreateDatastoreModal(props: Props) {
                 </StepLabel>
                 <StepContent>
                   <div className="flex flex-col space-y-4">
-                    <Typography>{step.description}</Typography>
+                    {/* <Typography>{step.description}</Typography> */}
 
                     {index === 0 && (
                       <Alert color="primary">

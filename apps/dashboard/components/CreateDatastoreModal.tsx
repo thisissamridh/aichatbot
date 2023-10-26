@@ -14,6 +14,7 @@ import Step from '@mui/material/Step';
 import StepContent from '@mui/material/StepContent';
 import StepLabel from '@mui/material/StepLabel';
 import Stepper from '@mui/material/Stepper';
+import { StepIcon } from '@mui/material';
 import dynamic from 'next/dynamic';
 import React from 'react';
 
@@ -38,6 +39,8 @@ const DatasourceForm = dynamic(
     ssr: false,
   }
 );
+
+
 
 type Props = {
   isOpen?: boolean;
@@ -119,6 +122,8 @@ export default function CreateDatastoreModal(props: Props) {
             <Box sx={{ mb: 2 }}>
               <div>
                 <Button
+                  className='bg-green-400 text-black hover:bg-green-500'
+
                   type="submit"
                   variant="solid"
                   loading={btnProps.isLoading}
@@ -126,7 +131,8 @@ export default function CreateDatastoreModal(props: Props) {
                 >
                   Continue
                 </Button>
-                {/* <Button
+                {/*<Button
+                  className='bg-green-400 text-black hover:bg-green-500'
                   disabled={btnProps.isLoading}
                   onClick={handleBack}
                   sx={{ mt: 1, mr: 1 }}
@@ -141,7 +147,7 @@ export default function CreateDatastoreModal(props: Props) {
     },
     {
       label: 'Choose a Datasource type',
-      description: `An empty Datastore is not very useful! Now add some data in it`,
+      // description: `An empty Datastore is not very useful! Now add some data in it`,
       disableButtons: true,
       component: (
         <DatasourceOptions
@@ -156,7 +162,7 @@ export default function CreateDatastoreModal(props: Props) {
     },
     {
       label: 'Setup the Datasource',
-      description: `An empty Datastore is not very useful! Now add some data in it`,
+      // description: `An empty Datastore is not very useful! Now add some data in it`,
       disableButtons: true,
       component: state.selectedSourceType && (
         <DatasourceForm
@@ -179,6 +185,7 @@ export default function CreateDatastoreModal(props: Props) {
             <Box sx={{ mb: 2 }}>
               <div>
                 <Button
+                  className='bg-green-400 text-black hover:bg-green-500'
                   type="submit"
                   loading={btnProps.isLoading}
                   sx={{ mt: 1, mr: 1 }}
@@ -186,6 +193,7 @@ export default function CreateDatastoreModal(props: Props) {
                   Finish
                 </Button>
                 <Button
+                  className='bg-green-400 text-black hover:bg-green-500'
                   disabled={btnProps.isLoading}
                   onClick={handleBack}
                   sx={{ mt: 1, mr: 1 }}
@@ -200,6 +208,27 @@ export default function CreateDatastoreModal(props: Props) {
       ),
     },
   ];
+
+  function CustomStepIcon(props: any) {
+    const { active, completed } = props;
+
+    return (
+      <StepIcon
+        {...props}
+        sx={{
+          '&.MuiStepIcon-root': {
+            color: 'green', // default color
+          },
+          '&.MuiStepIcon-active': {
+            color: 'green', // active color
+          },
+          '&.MuiStepIcon-completed': {
+            color: 'green', // completed color
+          },
+        }}
+      />
+    );
+  }
 
   return (
     <Modal
@@ -221,6 +250,7 @@ export default function CreateDatastoreModal(props: Props) {
           {steps.map((step, index) => (
             <Step key={step.label}>
               <StepLabel
+                StepIconComponent={CustomStepIcon} // use custom icon
                 optional={
                   index === 3 ? (
                     <Typography variant="plain">Last step</Typography>
@@ -231,13 +261,14 @@ export default function CreateDatastoreModal(props: Props) {
               </StepLabel>
               <StepContent>
                 <div className="flex flex-col space-y-4">
-                  <Typography>{step.description}</Typography>
+                  {/* <Typography>{step.description}</Typography> */}
                   {step.component}
 
                   {!step.disableButtons && (
                     <Box sx={{ mb: 2 }}>
                       <div>
                         <Button
+                          className='bg-green-400 text-black hover:bg-green-500'
                           variant="outlined"
                           // color="secondary"
                           onClick={handleNext}
@@ -246,6 +277,7 @@ export default function CreateDatastoreModal(props: Props) {
                           {index === steps.length - 1 ? 'Finish' : 'Continue'}
                         </Button>
                         <Button
+                          className='bg-green-400 text-black hover:bg-green-500'
                           disabled={index === 0}
                           onClick={handleBack}
                           sx={{ mt: 1, mr: 1 }}

@@ -96,10 +96,11 @@ export default function DatasourcesPage() {
         isOpen={true}  // Always render the modal
         onSubmitSuccess={(datastore) => {
           getDatastoresQuery.mutate();
-          router.push(`/datastores/${datastore.id}`);
+          // router.push(`/datastores/${datastore.id}`);
         }}
         handleClose={() => {
-          setState({ isCreateDatastoreModalOpen: false });
+          // setState({ isCreateDatastoreModalOpen: false });
+          alert("Data has been saved")
         }}
       />
     </Box>
