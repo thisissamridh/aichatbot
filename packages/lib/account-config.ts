@@ -35,16 +35,16 @@ const config: {
     type: SubscriptionPlan.level_0,
     label: 'Free',
     limits: {
-      maxAgents: 1,
-      maxAgentsQueries: 20,
-      maxDatastores: 1,
-      maxDatasources: 10, // per datastore
-      maxFileSize: 1000000, // 1 MB
+      maxAgents: 100,
+      maxAgentsQueries: 200,
+      maxDatastores: 100,
+      maxDatasources: 100, // per datastore
+      maxFileSize: 10000000, // 1 MB
       maxDataProcessing: 5000000, // 5 MB
-      maxSummary: 10,
-      maxWebsiteURL: 10,
-      maxSeats: 1,
-      maxStoredTokens: 20000,
+      maxSummary: 100,
+      maxWebsiteURL: 100,
+      maxSeats: 10,
+      maxStoredTokens: 200000,
     },
   },
   [SubscriptionPlan.level_1]: {

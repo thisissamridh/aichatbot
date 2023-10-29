@@ -23,52 +23,52 @@ type DatsourceOption = {
 };
 
 const options: DatsourceOption[] = [
-  {
-    type: DatasourceType.web_site,
-    label: 'Web Site',
-    description: 'Crawl all pages of a web site',
-    icon: undefined,
-    isPremium: true,
-  },
-  {
-    type: 'google_drive_folder' as any,
-    label: 'Google Drive™',
-    description: 'Talk to your Google Drive files',
-    isPremium: true,
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1024px-Google_Drive_icon_%282020%29.svg.png?20221103153031',
-  },
-  {
-    type: 'notion' as any,
-    label: 'Notion',
-    description: 'Connect your Notion workspace',
-    icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg',
-    disabled: false,
-    isPremium: true,
-  },
-  {
-    type: DatasourceType.text,
-    label: 'Text',
-    description: 'Paste some text',
-    icon: undefined,
-  },
+  // {
+  //   type: DatasourceType.web_site,
+  //   label: 'Web Site',
+  //   description: 'Crawl all pages of a web site',
+  //   icon: undefined,
+  //   isPremium: true,
+  // },
+  // {
+  //   type: 'google_drive_folder' as any,
+  //   label: 'Google Drive™',
+  //   description: 'Talk to your Google Drive files',
+  //   isPremium: true,
+  //   icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1024px-Google_Drive_icon_%282020%29.svg.png?20221103153031',
+  // },
+  // {
+  //   type: 'notion' as any,
+  //   label: 'Notion',
+  //   description: 'Connect your Notion workspace',
+  //   icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Notion-logo.svg',
+  //   disabled: false,
+  //   isPremium: true,
+  // },
+  // {
+  //   type: DatasourceType.text,
+  //   label: 'Text',
+  //   description: 'Paste some text',
+  //   icon: undefined,
+  // },
   {
     type: 'file' as any,
-    label: 'File',
-    description: 'It can be: PDF, CSV, JSON, Text, PowerPoint, Word, Excel',
+    label: 'PDF File',
+    description: 'uplaod a Pdf file',
     disabled: false,
   },
-  {
-    type: DatasourceType.web_page,
-    label: 'Web Page',
-    description: 'Crawl text from a single web page',
-    icon: undefined,
-  },
-  {
-    type: DatasourceType.qa,
-    label: 'Q&A',
-    description: 'Improve Answers with explicit Q&A content',
-    disabled: false,
-  },
+  // {
+  //   type: DatasourceType.web_page,
+  //   label: 'Web Page',
+  //   description: 'Crawl text from a single web page',
+  //   icon: undefined,
+  // },
+  // {
+  //   type: DatasourceType.qa,
+  //   label: 'Q&A',
+  //   description: 'Improve Answers with explicit Q&A content',
+  //   disabled: false,
+  // },
 ];
 
 const DatasourceOptions = (props: Props) => {
