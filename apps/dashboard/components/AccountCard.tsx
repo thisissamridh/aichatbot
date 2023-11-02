@@ -74,9 +74,8 @@ const UsageGauge = (props: {
   return (
     <Stack width={'100%'} gap={1}>
       <Typography level="body-xs" sx={{ textAlign: 'right' }}>
-        {`${(props.value || 0).toFixed(props.fixed || 0)} / ${props.max} ${
-          props.label
-        }`}
+        {`${(props.value || 0).toFixed(props.fixed || 0)} / ${props.max} ${props.label
+          }`}
       </Typography>
       <LinearProgress
         determinate
@@ -89,7 +88,7 @@ const UsageGauge = (props: {
 };
 
 type Props = {};
-function AccountCard({}: Props) {
+function AccountCard({ }: Props) {
   const router = useRouter();
   const session = useSession();
 
@@ -231,11 +230,11 @@ function AccountCard({}: Props) {
             <UsageGauge
               value={
                 (session?.data?.organization?.usage?.nbStoredTokens || 0) /
-                1000000
+                100000000
               }
               max={
                 accountConfig?.[session?.data?.organization?.currentPlan!]
-                  ?.limits?.maxStoredTokens / 1000000
+                  ?.limits?.maxStoredTokens / 100000000
               }
               label={'Million words stored'}
               fixed={3}
