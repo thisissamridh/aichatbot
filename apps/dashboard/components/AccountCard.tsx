@@ -234,7 +234,8 @@ function AccountCard({ }: Props) {
               }
               max={
                 accountConfig?.[session?.data?.organization?.currentPlan!]
-                  ?.limits?.maxStoredTokens / 100000000
+                  ?.limits?.maxStoredTokens / 100000
+
               }
               label={'Million words stored'}
               fixed={3}

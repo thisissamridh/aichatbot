@@ -20,6 +20,7 @@ type DatsourceOption = {
   icon?: any;
   disabled?: boolean;
   isPremium?: boolean | undefined;
+  accept?: string;
 };
 
 const options: DatsourceOption[] = [
@@ -55,20 +56,27 @@ const options: DatsourceOption[] = [
     type: 'file' as any,
     label: 'PDF File',
     description: 'uplaod a Pdf file',
+    accept: '.pdf',
     disabled: false,
   },
-  // {
-  //   type: DatasourceType.web_page,
-  //   label: 'Web Page',
-  //   description: 'Crawl text from a single web page',
-  //   icon: undefined,
-  // },
-  // {
-  //   type: DatasourceType.qa,
-  //   label: 'Q&A',
-  //   description: 'Improve Answers with explicit Q&A content',
-  //   disabled: false,
-  // },
+  {
+    type: 'file' as any,
+    label: 'PPtx File',
+    description: 'upload a PPTx File',
+    disabled: false
+  },
+  {
+    type: DatasourceType.web_page,
+    label: 'Web Page',
+    description: 'Crawl text from a single web page',
+    icon: undefined,
+  },
+  {
+    type: 'file' as any,
+    label: 'Text File',
+    description: 'Upload Txt File',
+    disabled: false,
+  },
 ];
 
 const DatasourceOptions = (props: Props) => {

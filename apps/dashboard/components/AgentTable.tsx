@@ -86,7 +86,7 @@ export default function AgentTable({ items }: { items: Agent[] }) {
                 </td>
 
                 <td>
-                  <Chip
+                  {/* <Chip
                     variant="soft"
                     size="sm"
                     color={
@@ -97,7 +97,7 @@ export default function AgentTable({ items }: { items: Agent[] }) {
                     }
                   >
                     {agent.visibility}
-                  </Chip>
+                  </Chip> */}
                 </td>
                 <td>
                   <Stack direction="row" spacing={1}>

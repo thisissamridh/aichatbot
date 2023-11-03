@@ -127,12 +127,12 @@ export default function BaseForm(props: Props) {
 
         <div className="flex flex-row">
           <FormControl className="flex flex-row space-x-4">
-            <Checkbox
+            {/* <Checkbox
               defaultChecked={!!props?.defaultValues?.isPublic}
               {...register('isPublic')}
-            />
+            /> */}
             <div className="flex flex-col">
-              <FormLabel>Public</FormLabel>
+              {/* <FormLabel>Public</FormLabel> */}
               <Typography level="body-xs">
                 {/* When activated, your datastore will be available by anyone on
                 the internet.{' '} */}

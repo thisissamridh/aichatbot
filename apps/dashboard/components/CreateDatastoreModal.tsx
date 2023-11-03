@@ -106,7 +106,7 @@ export default function CreateDatastoreModal(props: Props) {
     //   ),
     // },
     {
-      label: 'Datasense Configuration',
+      label: 'DocStorage Configuration',
       // description: 'A Datastore can contain multiple datasources',
       disableButtons: true,
       component:
@@ -146,7 +146,7 @@ export default function CreateDatastoreModal(props: Props) {
         } as DatastoreFormProps),
     },
     {
-      label: 'Choose a Datasense type',
+      label: 'Choose a DocStorage type',
       // description: `An empty Datastore is not very useful! Now add some data in it`,
       disableButtons: true,
       component: (
@@ -161,7 +161,7 @@ export default function CreateDatastoreModal(props: Props) {
       ),
     },
     {
-      label: 'Setup the Datasense',
+      label: 'Setup the DocStorage',
       // description: `An empty Datastore is not very useful! Now add some data in it`,
       disableButtons: true,
       component: state.selectedSourceType && (

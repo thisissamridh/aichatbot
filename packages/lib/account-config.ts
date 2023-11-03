@@ -44,7 +44,7 @@ const config: {
       maxSummary: 100,
       maxWebsiteURL: 100,
       maxSeats: 10,
-      maxStoredTokens: 200000,
+      maxStoredTokens: 20000000,
     },
   },
   [SubscriptionPlan.level_1]: {
